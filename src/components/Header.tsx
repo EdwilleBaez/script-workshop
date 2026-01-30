@@ -7,7 +7,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo / Brand */}
           <a href="#" className="font-serif text-xl tracking-tight">
-            Escribe tu guion<span className="text-primary">.</span>
+            Tu primer guion<span className="text-primary">.</span>
           </a>
 
           {/* Navigation - minimal */}
