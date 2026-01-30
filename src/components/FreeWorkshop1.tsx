@@ -77,10 +77,11 @@ const FreeWorkshop = () => {
           {/* Schedule Info */}
           <motion.div
             variants={scaleIn}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 py-6 px-8 bg-background border border-border/50 max-w-xl mx-auto"
+            className="flex flex-col sm:flex-row items-start sm:items-center justify-center gap-6 py-6 px-8 bg-background border border-border/50 max-w-xl mx-auto"
           >
-            <div className="flex items-center gap-3">
-              <CalendarDays className="w-5 h-5 text-primary" />
+            {/* Mes */}
+            <div className="flex items-start gap-3">
+              <CalendarDays className="w-5 h-5 text-primary mt-1" />
               <div className="text-left">
                 <p className="text-xs uppercase tracking-wider text-muted-foreground">
                   Mes
@@ -93,8 +94,9 @@ const FreeWorkshop = () => {
 
             <div className="w-px h-8 bg-border hidden sm:block" />
 
-            <div className="flex items-center gap-3">
-              <Calendar className="w-5 h-5 text-primary" />
+            {/* Días */}
+            <div className="flex items-start gap-3">
+              <Calendar className="w-5 h-5 text-primary mt-1" />
               <div className="text-left">
                 <p className="text-xs uppercase tracking-wider text-muted-foreground">
                   Días
@@ -105,13 +107,14 @@ const FreeWorkshop = () => {
 
             <div className="w-px h-8 bg-border hidden sm:block" />
 
-            <div className="flex items-center gap-3">
-              <Clock className="w-5 h-5 text-primary" />
+            {/* Hora */}
+            <div className="flex items-start gap-3">
+              <Clock className="w-5 h-5 text-primary mt-1" />
               <div className="text-left">
                 <p className="text-xs uppercase tracking-wider text-muted-foreground">
                   Hora
                 </p>
-                <p className="font-serif text-foreground">
+                <p className="font-serif text-foreground leading-tight">
                   07:00 PM <br /> (Rep. Dom.)
                 </p>
               </div>
