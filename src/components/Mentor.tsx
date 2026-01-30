@@ -67,7 +67,7 @@ const Mentor = () => {
                 />
 
                 {/* Small decorative image */}
-                <motion.div
+                {/* <motion.div
                   className="absolute -bottom-8 -right-8 w-32 h-32 shadow-lg hidden md:block"
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -79,7 +79,7 @@ const Mentor = () => {
                     alt="Cine"
                     className="w-full h-full object-cover"
                   />
-                </motion.div>
+                </motion.div> */}
 
                 {/* Decorative frame corners */}
                 <div className="absolute -top-3 -left-3 w-12 h-12 border-t-2 border-l-2 border-primary/30" />
@@ -100,11 +100,11 @@ const Mentor = () => {
                 animate={isInView ? { opacity: 1 } : {}}
                 transition={{ delay: 0.4 }}
               >
-                Sobre el mentor
+                Sobre la mentora
               </motion.p>
 
               <h2 className="text-balance">
-                No soy un gurú del cine.
+                No soy una gurú del cine.
                 <br />
                 Soy alguien que ya pasó por ahí.
               </h2>

@@ -7,25 +7,31 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo / Brand */}
           <a href="#" className="font-serif text-xl tracking-tight">
-            Guion<span className="text-primary">.</span>
+            Escribe tu guion<span className="text-primary">.</span>
           </a>
-          
+
           {/* Navigation - minimal */}
           <nav className="hidden md:flex items-center gap-8">
-            <a 
-              href="#taller-gratuito" 
+            <a
+              href="#taller-gratuito"
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
-              Taller gratuito
+              Introducción al guion
             </a>
-            <a 
-              href="#intensivo" 
+            <a
+              href="#intensivo"
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
-              Taller intensivo
+              Laboratorio de guion
+            </a>
+            <a
+              href="#mentorias"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Mentorías
             </a>
           </nav>
-          
+
           {/* CTA */}
           <Button variant="outline" size="sm" asChild>
             <a href="#inscripcion">Inscribirme</a>

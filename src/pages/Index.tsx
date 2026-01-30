@@ -20,6 +20,9 @@ import FreeWorkshop1 from "@/components/FreeWorkshop1";
 import IntensiveWorkshop1 from "@/components/IntensiveWorkshop1";
 import Testimonials1 from "@/components/Testimonials1";
 import FinalCTA1 from "@/components/FinalCTA1";
+import FreeWorkshopCurriculum from "@/components/FreeWorkshopCurriculum";
+import Laboratory from "@/components/Laboratory";
+import MentorshipDynamics from "@/components/MentorshipDynamics";
 
 const Index = () => {
   return (
@@ -36,12 +39,15 @@ const Index = () => {
         {/* <Mentor1 /> */}
         {/* <WhyIDoThis /> */}
         <WhyIDoThis1 />
-        {/* <Mentorships /> */}
-        <Mentorships1 />
         {/* <FreeWorkshop /> */}
         <FreeWorkshop1 />
         {/* <IntensiveWorkshop /> */}
-        <IntensiveWorkshop1 />
+        <FreeWorkshopCurriculum/>
+        <Laboratory/>
+        {/* <IntensiveWorkshop1 /> */}
+        <Mentorships1 />
+        <MentorshipDynamics/>
+        {/* <Mentorships /> */}
         {/* <Testimonials />
         <Testimonials1 /> */}
         <FinalCTA />    

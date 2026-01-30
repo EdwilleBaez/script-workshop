@@ -97,7 +97,7 @@ const FinalCTA = () => {
                   label=""
                   showIcon={false}
                 /> */}
-              
+
                 <div className="aspect-square overflow-hidden">
                   <img
                     src={image3}
@@ -118,7 +118,7 @@ const FinalCTA = () => {
 
             {/* Form side */}
             <motion.div
-              className="text-center lg:text-left space-y-8"
+              className="text-center lg:text-left mt-8"
               initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8 }}
@@ -146,13 +146,13 @@ const FinalCTA = () => {
 
               {/* Form area */}
               <motion.div
-                className="pt-6 space-y-6"
+                className="pt-6"
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.5 }}
               >
-                <div className="space-y-4">
-                  <div className="space-y-3">
+                <div className="pt-2">
+                  {/* <div className="space-y-3">
                     <motion.input
                       type="text"
                       placeholder="Tu nombre"
@@ -165,14 +165,27 @@ const FinalCTA = () => {
                       className="w-full px-4 py-3 border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
                       whileFocus={{ borderColor: "hsl(var(--primary))" }}
                     />
-                  </div>
+                  </div> */}
+
+                  <p className="text-xl md:text-xl text-foreground leading-relaxed">
+                    Si llevas tiempo pensando en tu guion, ya estás listo para
+                    empezarlo; empezamos desde donde estés.
+                    <br />
+                  </p>
 
                   <motion.div
+                    className="py-5"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >
-                    <Button variant="cta" className="w-full" size="lg">
-                      Inscribirme al taller gratuito
+                    <Button variant="cta" className="w-full" size="lg" asChild>
+                      <a
+                        href="https://calendly.com/baezedwille/mentoria"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Agendar mentoría
+                      </a>
                     </Button>
                   </motion.div>
                 </div>

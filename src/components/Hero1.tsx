@@ -29,7 +29,7 @@ const Hero = () => {
           {/* CTA */}
           <div className="pt-6 space-y-4">
             <Button variant="hero" size="lg" asChild>
-              <a href="#taller-gratuito">Inscribirme en el taller gratuito</a>
+              <a href="https://chat.whatsapp.com/D2XXUfOyALq1glqBq4mdfN?mode=gi_t" target="_blank" rel="noopener noreferrer">Inscribirme en el taller gratuito</a>
             </Button>
             <p className="text-sm text-muted-foreground">
               No necesitas experiencia previa. Solo ganas de escribir.

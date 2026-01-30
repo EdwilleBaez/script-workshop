@@ -3,10 +3,9 @@ import { Calendar, Clock, CalendarDays } from "lucide-react";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import ImagePlaceholder from "./ImagePlaceholder";
 import zoomMeeting from "@/assets/zoom.jpg";
 
-const features = ["Duración: 1 mes", "100% online", "Sin costo", "Sin presión"];
+const features = ["Duración: 4 semanas", "100% online", "Sin costo", "Sin presión"];
 
 const FreeWorkshop = () => {
   const ref = useRef(null);
@@ -249,16 +248,16 @@ const FreeWorkshop = () => {
                 >
                   <Button variant="cta" size="lg" asChild>
                     <a
-                      href="https://calendly.com/tu-usuario/taller-gratuito"
+                      href="https://chat.whatsapp.com/D2XXUfOyALq1glqBq4mdfN?mode=gi_t"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Reservar mi lugar en Calendly
+                      Reservar mi lugar
                     </a>
                   </Button>
                 </motion.div>
                 <p className="text-sm text-muted-foreground">
-                  Al agendar recibirás un correo con el enlace de Zoom
+                  Únete a nuestro grupo de WhatsApp para coordinar los detalles.
                 </p>
               </motion.div>
             </motion.div>
