@@ -115,7 +115,7 @@ const FreeWorkshop = () => {
                   Hora
                 </p>
                 <p className="font-serif text-foreground leading-tight">
-                  07:00 PM <br /> (Rep. Dom.)
+                  06:30 PM <br /> (Rep. Dom.)
                 </p>
               </div>
             </div>
