@@ -34,7 +34,7 @@ const Header = () => {
 
           {/* CTA */}
           <Button variant="outline" size="sm" asChild>
-            <a href="#inscripcion">Inscribirme</a>
+            <a href="#inscripcion">Agendar</a>
           </Button>
         </div>
       </div>

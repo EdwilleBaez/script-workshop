@@ -11,7 +11,7 @@ const mentorships = [
     cta: {
       label: "Agendar",
       variant: "cta",
-      href: "https://calendly.com/baezedwille/mentoria",
+      href: "https://www.paypal.com/ncp/payment/UDMFXZ6QNTF5A",
     },
   },
   {

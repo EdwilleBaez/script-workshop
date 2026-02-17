@@ -180,13 +180,14 @@ const FinalCTA = () => {
                   >
                     <Button variant="cta" className="w-full" size="lg" asChild>
                       <a
-                        href="https://calendly.com/baezedwille/mentoria"
+                        href="https://www.paypal.com/ncp/payment/UDMFXZ6QNTF5A"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
                         Agendar mentoría
                       </a>
                     </Button>
+                    
                   </motion.div>
                 </div>
 
