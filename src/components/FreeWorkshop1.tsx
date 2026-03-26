@@ -1,6 +1,14 @@
 import { Button } from "@/components/ui/button";
+import {
+  Calendar,
+  Clock,
+  CalendarDays,
+  PenTool,
+  Users,
+  Timer,
+  Target,
+} from "lucide-react";
 import { getNextMonthLabel } from "@/utils/getNetxMonthLabel";
-import { Calendar, Clock, CalendarDays } from "lucide-react";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
@@ -39,9 +47,8 @@ const scaleIn = {
 };
 
 const FreeWorkshop = () => {
-
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
     <section id="taller-gratuito" className="section-padding bg-soft/50">
@@ -71,52 +78,83 @@ const FreeWorkshop = () => {
           </motion.h2>
 
           {/* Description */}
-          <motion.p
+          {/* <motion.p
             variants={fadeUp}
             className="text-xl text-muted-foreground max-w-xl mx-auto"
           >
             Un espacio guiado donde aprenderás los fundamentos del guion y,
             sobre todo, a terminar lo que empiezas.
-          </motion.p>
+          </motion.p> */}
 
           {/* Info Cards */}
-          <div   ref={ref} className="grid sm:grid-cols-2 gap-4 pt-2">
-                {[
-                  {
-                    title: "Compromiso real",
-                    text: "Este proceso requiere un compromiso real con tu escritura: al menos 2 horas diarias para trabajar en tus ejercicios y avanzar en tu guion."
-                  },
-                  {
-                    title: "Sesiones semanales",
-                    text: "Nos reunimos una vez por semana de forma virtual, pero tu progreso depende del trabajo constante del día a día."
-                  },
-                  {
-                    title: "Hazle tiempo",
-                    text: "Este no es un espacio para hacerlo \"cuando tengas tiempo\". Es un espacio para hacerle tiempo a lo que quieres terminar."
-                  },
-                  {
-                    title: "Tu escritura importa",
-                    text: "Un espacio guiado donde aprenderás los fundamentos del guion y, sobre todo, a terminar lo que empiezas."
-                  }
-                ].map((card, index) => (
-                  <motion.div
-                    key={index}
-                    className="p-5 bg-background/80 backdrop-blur-sm border border-border/50 space-y-2 hover:border-primary/30 transition-colors duration-300"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ delay: 0.5 + index * 0.15 }}
-                    whileHover={{ y: -4, boxShadow: "0 8px 24px -8px hsl(var(--primary) / 0.15)" }}
-                  >
-                    <h4 className="text-xl font-semibold text-foreground">{card.title}</h4>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{card.text}</p>
-                  </motion.div>
-                ))}
-              </div>
+          <div ref={ref} className="grid sm:grid-cols-2 gap-4 pt-2">
+            {[
+              {
+                icon: Target,
+                title: "Tu escritura importa",
+                text: "Aprenderás los fundamentos del guion y, sobre todo, a terminar lo que empiezas.",
+                highlight: "Termina tu guion",
+              },
+              {
+                icon: Timer,
+                title: "Mínimo 2 horas diarias",
+                text: "Compromiso real con tu escritura para trabajar en ejercicios y avanzar en tu guion.",
+                highlight: "Compromiso real",
+              },
+              {
+                icon: Users,
+                title: "1 sesión semanal",
+                text: "Nos reunimos de forma virtual, pero tu progreso depende del trabajo constante del día a día.",
+                highlight: "Virtual en vivo",
+              },
+              {
+                icon: PenTool,
+                title: "Hazle tiempo",
+                text: 'No es para hacerlo "cuando puedas". Es para hacerle tiempo a lo que quieres terminar.',
+                highlight: "Disciplina creativa",
+              },
+            ].map((card, index) => {
+              const Icon = card.icon;
+              return (
+                <motion.div
+                  key={index}
+                  className="p-5 bg-background/80 backdrop-blur-sm border border-border/50 space-y-3 hover:border-primary/30 transition-colors duration-300 group text-left"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ delay: 0.5 + index * 0.15 }}
+                  whileHover={{
+                    y: -4,
+                    boxShadow: "0 8px 24px -8px hsl(var(--primary) / 0.15)",
+                  }}
+                >
+                  <div className="flex items-center gap-3">
+                    <motion.div
+                      className="w-10 h-10 bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors"
+                      whileHover={{ rotate: 5 }}
+                    >
+                      <Icon className="w-5 h-5 text-primary" />
+                    </motion.div>
+                    <div>
+                      <span className="text-sm font-semibold uppercase tracking-wider text-primary">
+                        {card.highlight}
+                      </span>
+                      <h4 className="text-2xl font-semibold font-serif text-foreground leading-tight">
+                        {card.title}
+                      </h4>
+                    </div>
+                  </div>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {card.text}
+                  </p>
+                </motion.div>
+              );
+            })}
+          </div>
 
           {/* Schedule Info */}
           <motion.div
             variants={scaleIn}
-            className="flex flex-col sm:flex-row items-start sm:items-center justify-center gap-6 py-6 px-8 bg-background border border-border/50 max-w-xl mx-auto"
+            className="flex flex-col sm:flex-row items-start sm:items-center justify-center gap-6 py-6 px-8 bg-background border border-border/50 w-full mx-auto"
           >
             {/* Mes */}
             <div className="flex items-start gap-3">
