@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { getNextMonthLabel } from "@/utils/getNetxMonthLabel";
 import { Calendar, Clock, CalendarDays } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const features = [
   "Duración: 4 semanas",
@@ -38,6 +39,10 @@ const scaleIn = {
 };
 
 const FreeWorkshop = () => {
+
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" })
+
   return (
     <section id="taller-gratuito" className="section-padding bg-soft/50">
       <div className="section-container">
@@ -74,6 +79,40 @@ const FreeWorkshop = () => {
             sobre todo, a terminar lo que empiezas.
           </motion.p>
 
+          {/* Info Cards */}
+          <div   ref={ref} className="grid sm:grid-cols-2 gap-4 pt-2">
+                {[
+                  {
+                    title: "Compromiso real",
+                    text: "Este proceso requiere un compromiso real con tu escritura: al menos 2 horas diarias para trabajar en tus ejercicios y avanzar en tu guion."
+                  },
+                  {
+                    title: "Sesiones semanales",
+                    text: "Nos reunimos una vez por semana de forma virtual, pero tu progreso depende del trabajo constante del día a día."
+                  },
+                  {
+                    title: "Hazle tiempo",
+                    text: "Este no es un espacio para hacerlo \"cuando tengas tiempo\". Es un espacio para hacerle tiempo a lo que quieres terminar."
+                  },
+                  {
+                    title: "Tu escritura importa",
+                    text: "Un espacio guiado donde aprenderás los fundamentos del guion y, sobre todo, a terminar lo que empiezas."
+                  }
+                ].map((card, index) => (
+                  <motion.div
+                    key={index}
+                    className="p-5 bg-background/80 backdrop-blur-sm border border-border/50 space-y-2 hover:border-primary/30 transition-colors duration-300"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={isInView ? { opacity: 1, y: 0 } : {}}
+                    transition={{ delay: 0.5 + index * 0.15 }}
+                    whileHover={{ y: -4, boxShadow: "0 8px 24px -8px hsl(var(--primary) / 0.15)" }}
+                  >
+                    <h4 className="text-xl font-semibold text-foreground">{card.title}</h4>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{card.text}</p>
+                  </motion.div>
+                ))}
+              </div>
+
           {/* Schedule Info */}
           <motion.div
             variants={scaleIn}
@@ -101,7 +140,7 @@ const FreeWorkshop = () => {
                 <p className="text-xs uppercase tracking-wider text-muted-foreground">
                   Días
                 </p>
-                <p className="font-serif text-foreground">Martes</p>
+                <p className="font-serif text-foreground">Lunes</p>
               </div>
             </div>
 
