@@ -8,7 +8,7 @@ import {
   Timer,
   Target,
 } from "lucide-react";
-import { getNextMonthLabel } from "@/utils/getNetxMonthLabel";
+import { getNextEvenMonthLabel, getNextMonthLabel } from "@/utils/getNetxMonthLabel";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
@@ -164,7 +164,7 @@ const FreeWorkshop = () => {
                   Mes
                 </p>
                 <p className="font-serif text-foreground">
-                  {getNextMonthLabel()}
+                  {getNextEvenMonthLabel()}
                 </p>
               </div>
             </div>
@@ -178,7 +178,7 @@ const FreeWorkshop = () => {
                 <p className="text-xs uppercase tracking-wider text-muted-foreground">
                   Días
                 </p>
-                <p className="font-serif text-foreground">Lunes</p>
+                <p className="font-serif text-foreground">Martes</p>
               </div>
             </div>
 
